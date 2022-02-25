@@ -16,10 +16,22 @@ namespace Bakery.Tests
     [TestMethod]
     public void GetLoafNumber_ReturnLoafNumber_Integer()
     {
-      int loafNumber = 1;
+      int loafNumber = 0;
       Bread breadLoaf = new Bread(loafNumber);
       int result = breadLoaf.LoafNumber;
       Assert.AreEqual(loafNumber, result);
+    }
+
+        [TestMethod]
+    public void SetLoafNumber_ReturnUserLoafNumber_Integer()
+    {
+      int loafNumber = 0;
+      Bread breadLoaf = new Bread(loafNumber);
+
+      int userLoafNumber = 1;
+      breadLoaf.LoafNumber = userLoafNumber;
+      int result = breadLoaf.LoafNumber;
+      Assert.AreEqual(userLoafNumber, result);
     }
   }
 
