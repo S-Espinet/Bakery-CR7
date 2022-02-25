@@ -56,12 +56,9 @@ namespace Bakery.Tests
     [TestMethod]
     public void CalculatePrice_ReturnPrice_Integer()
     {
-      int loafNumber = 4;
-      int freeLoafCounter = 3;
-      int freeLoaves = loafNumber/freeLoafCounter;
-      int price = 5;
-      int totalPrice = (loafNumber - freeLoaves) * price;
-      Assert.AreEqual(totalPrice);
+      Bread breadOrder = new Bread(3, 5);
+      int result = breadOrder.CalculatePrice();
+      Assert.AreEqual(10, result);
     }
   }
 
