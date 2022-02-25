@@ -33,6 +33,15 @@ namespace Bakery.Tests
       int result = breadLoaf.LoafNumber;
       Assert.AreEqual(userLoafNumber, result);
     }
+
+    [TestMethod]
+    public void GetPrice_ReturnPrice_Integer()
+    {
+      int price = 2;
+      Bread breadLoaf = new Bread(price);
+      int result = breadLoaf.Price;
+      Assert.AreEqual(price, result);
+    }
   }
 
 
