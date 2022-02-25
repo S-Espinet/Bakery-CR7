@@ -12,6 +12,15 @@ namespace Bakery.Tests
       Bread breadLoaf = new Bread();
       Assert.AreEqual(typeof(Bread), breadLoaf.GetType());
     }
+
+    [TestMethod]
+    public void GetLoafNumber_ReturnLoafNumber_Integer()
+    {
+      int loafNumber = 1;
+      Bread breadLoaf = new Bread(loafNumber);
+      int result = breadLoaf.LoafNumber;
+      Assert.AreEqual(loafNumber, result);
+    }
   }
 
 
