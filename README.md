@@ -18,6 +18,7 @@ _This is a basic C# console application that_
 * _click `Code` button and select desired security protocol_
 * _run git clone in terminal into desired directory_
 * _make sure that dotnet is installed_
+* _run "dotnet restore" in terminal from Bakery.Tests directory_
 * _
 
 ## Known Bugs
