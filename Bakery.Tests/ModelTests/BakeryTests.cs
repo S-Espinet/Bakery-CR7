@@ -9,16 +9,16 @@ namespace Bakery.Tests
     [TestMethod]
     public void BreadConstructor_CreateInstanceOfBread_Bread()
     {
-      Bread breadLoaf = new Bread(0, 0);
-      Assert.AreEqual(typeof(Bread), breadLoaf.GetType());
+      Bread breadOrder = new Bread(0, 0);
+      Assert.AreEqual(typeof(Bread), breadOrder.GetType());
     }
 
     [TestMethod]
     public void GetLoafNumber_ReturnLoafNumber_Integer()
     {
       int loafNumber = 0;
-      Bread breadLoaf = new Bread(loafNumber, 0);
-      int result = breadLoaf.LoafNumber;
+      Bread breadOrder = new Bread(loafNumber, 0);
+      int result = breadOrder.LoafNumber;
       Assert.AreEqual(loafNumber, result);
     }
 
@@ -26,11 +26,11 @@ namespace Bakery.Tests
     public void SetLoafNumber_ReturnUserLoafNumber_Integer()
     {
       int loafNumber = 0;
-      Bread breadLoaf = new Bread(loafNumber, 0);
+      Bread breadOrder = new Bread(loafNumber, 0);
 
       int userLoafNumber = 1;
-      breadLoaf.LoafNumber = userLoafNumber;
-      int result = breadLoaf.LoafNumber;
+      breadOrder.LoafNumber = userLoafNumber;
+      int result = breadOrder.LoafNumber;
       Assert.AreEqual(userLoafNumber, result);
     }
 
@@ -38,8 +38,8 @@ namespace Bakery.Tests
     public void GetPrice_ReturnPrice_Integer()
     {
       int price = 2;
-      Bread breadLoaf = new Bread(0, price);
-      int result = breadLoaf.Price;
+      Bread breadOrder = new Bread(0, price);
+      int result = breadOrder.Price;
       Assert.AreEqual(price, result);
     }
 
@@ -48,9 +48,22 @@ namespace Bakery.Tests
     {
       int loafNumber = 0;
       int price = 0;
-      Bread breadLoaf = new Bread(loafNumber, price);
-      int priceResult = breadLoaf.Price;
+      Bread breadOrder = new Bread(loafNumber, price);
+      int priceResult = breadOrder.Price;
       Assert.AreEqual(price, priceResult);
+    }
+
+    [TestMethod]
+    public void CalculatePrice_ReturnPrice_Integer()
+    {
+      int loafNumber = 4;
+      int freeLoafCounter = 3;
+      int freeLoaves = loafNumber/freeLoafCounter;
+      int pricePerLoaf = 5;
+      int price = (loafNumber - freeLoaves) * pricePerLoaf;
+      Bread breadOrder = new Bread(loafNumber, price);
+      int calculatedPrice = breadOrder.Price;
+      Assert.AreEqual(calculatedPrice, price); 
     }
   }
 

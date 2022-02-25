@@ -10,11 +10,10 @@ namespace Bakery
       LoafNumber = loafNumber;
       Price = price;
     }
+
+    private int CalculatePrice()
+    {
+      return 0;
+    }
   }
 }
-
-//if loapNumber % 1 = 0
-//price = 5 * loafNumber
-
-// if loafNumber % 3 = 0
-// price = 10 * loafNumber
