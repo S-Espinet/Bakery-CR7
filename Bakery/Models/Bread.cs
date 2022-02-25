@@ -10,11 +10,5 @@ namespace Bakery
       LoafNumber = loafNumber;
       Price = price;
     }
-
-    // private int SetPrice()
-    // {
-    //   return 0;
-    // }
-
   }
 }
