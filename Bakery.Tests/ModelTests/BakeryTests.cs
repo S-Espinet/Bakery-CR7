@@ -42,6 +42,16 @@ namespace Bakery.Tests
       int result = breadLoaf.Price;
       Assert.AreEqual(price, result);
     }
+
+    // [TestMethod]
+    // public void SetPrice_ReturnPrice_Integer()
+    // {
+    //   int loafNumber = 0;
+    //   int price = 0;
+    //   Bread breadLoaf = new Bread(loafNumber, price);
+    //   int priceResult = breadLoaf.SetPrice();
+    //   AssertEqual(price, priceResult);
+    // }
   }
 
 
