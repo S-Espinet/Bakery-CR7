@@ -59,11 +59,11 @@ namespace Bakery.Tests
       int loafNumber = 4;
       int freeLoafCounter = 3;
       int freeLoaves = loafNumber/freeLoafCounter;
-      int pricePerLoaf = 5;
-      int price = (loafNumber - freeLoaves) * pricePerLoaf;
+      int price = 5;
       Bread breadOrder = new Bread(loafNumber, price);
-      int calculatedPrice = breadOrder.Price;
-      Assert.AreEqual(calculatedPrice, price); 
+      int totalPrice = (loafNumber - freeLoaves) * price;
+      int result = breadOrder.Price;
+      Assert.AreEqual(totalPrice, result);
     }
   }
 
