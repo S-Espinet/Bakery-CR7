@@ -60,10 +60,8 @@ namespace Bakery.Tests
       int freeLoafCounter = 3;
       int freeLoaves = loafNumber/freeLoafCounter;
       int price = 5;
-      Bread breadOrder = new Bread(loafNumber, price);
       int totalPrice = (loafNumber - freeLoaves) * price;
-      int result = breadOrder.Price;
-      Assert.AreEqual(totalPrice, result);
+      Assert.AreEqual(totalPrice);
     }
   }
 
