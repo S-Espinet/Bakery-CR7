@@ -13,7 +13,9 @@ namespace Bakery
 
     public int CalculatePrice()
     {
-      return 0;
+      int freeLoaves = LoafNumber / 3;
+      int calculatedPrice = (LoafNumber - freeLoaves) * 5;
+      return calculatedPrice;
     }
   }
 }
