@@ -1,10 +1,24 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Namespace;
+using Bakery;
 
-namespace Template.Tests
+namespace Bakery.Tests
 {
   [TestClass]
-  public class Classname
+  public class BreadTests
+  {
+    [TestMethod]
+    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    {
+      //Example: LeapYear testLeapYear = new LeapYear();
+      Assert.AreEqual(ExpectedResult, CodeToTest);
+      //Example CodeToTest: testLeapYear.IsLeapYear(2020)
+    }
+  }
+
+
+
+  [TestClass]
+  public class PastryTests
   {
     [TestMethod]
     public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()

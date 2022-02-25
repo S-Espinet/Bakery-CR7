@@ -1,22 +1,22 @@
-namespace Namespace
+namespace Bakery
 {
-  public class Classname
+  public class Bread
   {
     //Example:
-    public bool IsLeapYear(int year)
-    {
-      if (year % 400 == 0)
-      {
-        return true;
-      }
-      else if (year % 100 == 0)
-      {
-        return false;
-      }
-      else
-      {
-        return year % 4 == 0;
-      }
-    }
+//     public bool IsLeapYear(int year)
+//     {
+//       if (year % 400 == 0)
+//       {
+//         return true;
+//       }
+//       else if (year % 100 == 0)
+//       {
+//         return false;
+//       }
+//       else
+//       {
+//         return year % 4 == 0;
+//       }
+//     }
   }
 }
