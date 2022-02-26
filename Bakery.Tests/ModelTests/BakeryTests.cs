@@ -123,5 +123,16 @@ namespace Bakery.Tests
       int result = pastriesOrder.PastryPrice;
       Assert.AreEqual(pastryprice, result);
     }
+
+    [TestMethod]
+    public void SetPastryPrice_ReturnPastryPrice_Integer()
+    {
+      int pastriesNumber = 0;
+      int pastryPrice = 0;
+      Pastry pastriesOrder = new Pastry(pastriesNumber, pastryPrice);
+      int pastryPriceResult = pastriesOrder.PastryPrice;
+      Assert.AreEqual(pastryPrice, pastryPriceResult);
+    }
+
   }
 }
