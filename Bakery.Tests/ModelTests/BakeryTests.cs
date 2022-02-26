@@ -102,5 +102,17 @@ namespace Bakery.Tests
       int result = pastryOrder.PastriesNumber;
       Assert.AreEqual(pastriesNumber, result);
     }
+
+            [TestMethod]
+    public void SetPastriesNumber_ReturnUserPastriesNumber_Integer()
+    {
+      int pastriesNumber = 0;
+      Pastry pastriesOrder = new Pastry(pastriesNumber, 0);
+
+      int userPastriesNumber = 1;
+      pastriesOrder.PastriesNumber = userPastriesNumber;
+      int result = pastriesOrder.PastriesNumber;
+      Assert.AreEqual(userPastriesNumber, result);
+    }
   }
 }
