@@ -1,20 +1,21 @@
-namespace Bakery
+namespace Bakery.Models
 {
   public class Bread
   {
     public int LoafNumber { get; set; }
 
     public int Price { get; private set; }
-    public Bread(int loafNumber, int price)
+    public Bread(int loafNumber)
     {
       LoafNumber = loafNumber;
-      Price = price;
+      Price = 5;
     }
 
     public int CalculatePrice()
     {
-      int freeLoaves = LoafNumber / 3;
-      int calculatedPrice = (LoafNumber - freeLoaves) * 5;
+      int freeLoafCounter = 3;
+      int freeLoaves = LoafNumber / freeLoafCounter;
+      int calculatedPrice = (LoafNumber - freeLoaves) * Price;
       return calculatedPrice;
     }
   }
