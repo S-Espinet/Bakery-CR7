@@ -54,11 +54,33 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void CalculatePrice_ReturnPrice_Integer()
+    public void CalculatePrice_ReturnPrice_Integer10()
     {
-      Bread breadOrder = new Bread(3, 5);
+      int loafNumber = 3;
+      int price = 5;
+      Bread breadOrder = new Bread(loafNumber, price);
       int result = breadOrder.CalculatePrice();
       Assert.AreEqual(10, result);
+    }
+
+    [TestMethod]
+    public void CalculatePrice_ReturnPrice_Integer5()
+    {
+      int loafNumber = 1;
+      int price = 5;
+      Bread breadOrder = new Bread(loafNumber, price);
+      int result = breadOrder.CalculatePrice();
+      Assert.AreEqual(5, result);
+    }
+
+    [TestMethod]
+    public void CalculatePrice_ReturnPrice_Integer15()
+    {
+      int loafNumber = 4;
+      int price = 5;
+      Bread breadOrder = new Bread(loafNumber, price);
+      int result = breadOrder.CalculatePrice();
+      Assert.AreEqual(15, result);
     }
   }
 
