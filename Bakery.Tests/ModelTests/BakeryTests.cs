@@ -90,7 +90,7 @@ namespace Bakery.Tests
       Assert.AreEqual(pastriesNumber, result);
     }
 
-        [TestMethod]
+    [TestMethod]
     public void SetPastriesNumber_ReturnUserPastriesNumber_Integer()
     {
       int pastriesNumber = 0;
@@ -99,6 +99,15 @@ namespace Bakery.Tests
       pastriesOrder.PastriesNumber = userPastriesNumber;
       int result = pastriesOrder.PastriesNumber;
       Assert.AreEqual(userPastriesNumber, result);
+    }
+
+    [TestMethod]
+    public void GetSinglePastryPrice_ReturnSinglePastryPrice_Integer()
+    {
+      int singlePastryprice = 2;
+      Pastry pastriesOrder = new Pastry(0);
+      int result = pastriesOrder.SinglePastryPrice;
+      Assert.AreEqual(singlePastryprice, result);
     }
   }
 }
