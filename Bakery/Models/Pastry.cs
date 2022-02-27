@@ -10,6 +10,7 @@ namespace Bakery
     {
       PastriesNumber = pastriesNumber;
       SinglePastryPrice = 2;
+      BoxedPastryPrice = 5;
     }
   }
 }
