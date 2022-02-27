@@ -46,7 +46,7 @@ namespace Bakery
       Bread breadOrder = new Bread(userLoafNumber);
       Pastry pastriesOrder = new Pastry(userPastriesNumber);
       int totalCost = breadOrder.CalculatePrice() + pastriesOrder.CalculatePastryPrice(); 
-      Console.WriteLine("The total cost of your order is: " + totalCost);
+      Console.WriteLine("The total cost of your order is: $" + totalCost);
       return;
     }
   }
