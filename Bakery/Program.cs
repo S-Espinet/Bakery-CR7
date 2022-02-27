@@ -21,6 +21,11 @@ namespace Bakery
         Console.WriteLine("Please enter a numeral (e.g. 4). Exiting program...");
         return;
       }
+      if (userLoafNumber < 0)
+      {
+        Console.WriteLine("Please enter a positive number. Exiting program...");
+        return;
+      }
       Console.WriteLine(" Pastries: ");
       string pastriesNumber = Console.ReadLine();
       int userPastriesNumber;
@@ -29,6 +34,11 @@ namespace Bakery
         userPastriesNumber = int.Parse(pastriesNumber);
       }
       catch
+      {
+        Console.WriteLine("Please enter a numeral (e.g. 4). Exiting program...");
+        return;
+      }
+      if (userPastriesNumber < 0)
       {
         Console.WriteLine("Please enter a numeral (e.g. 4). Exiting program...");
         return;
