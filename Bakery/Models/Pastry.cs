@@ -4,6 +4,7 @@ namespace Bakery
   {
     public int PastriesNumber { get; set; }
     public int SinglePastryPrice { get; private set; }
+    public int BoxedPastryPrice { get; private set; }
 
     public Pastry(int pastriesNumber)
     {
