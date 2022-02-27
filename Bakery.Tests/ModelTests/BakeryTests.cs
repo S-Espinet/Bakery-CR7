@@ -22,7 +22,7 @@ namespace Bakery.Tests
       Assert.AreEqual(loafNumber, result);
     }
 
-        [TestMethod]
+    [TestMethod]
     public void SetLoafNumber_ReturnUserLoafNumber_Integer()
     {
       int loafNumber = 0;
@@ -71,7 +71,7 @@ namespace Bakery.Tests
     }
   }
 
-    [TestClass]
+  [TestClass]
   public class PastryTests
   {
     [TestMethod]
@@ -79,6 +79,15 @@ namespace Bakery.Tests
     {
       Pastry pastryOrder = new Pastry(0);
       Assert.AreEqual(typeof(Pastry), pastryOrder.GetType());
+    }
+
+    [TestMethod]
+    public void GetPastriesNumber_ReturnPastriesNumber_Integer()
+    {
+      int pastriesNumber = 0;
+      Pastry pastryOrder = new Pastry(pastriesNumber);
+      int result = pastryOrder.PastriesNumber;
+      Assert.AreEqual(pastriesNumber, result);
     }
   }
 }
