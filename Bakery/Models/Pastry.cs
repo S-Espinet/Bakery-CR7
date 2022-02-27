@@ -15,7 +15,10 @@ namespace Bakery
 
     public int CalculatePastryPrice()
     {
-      return 0;
+      int boxedPastryTotalPrice = PastriesNumber / 3 * BoxedPastryPrice;
+      int singlePastryTotalPrice = PastriesNumber % 3 * SinglePastryPrice;
+      int calculatedPastryPrice = boxedPastryTotalPrice + singlePastryTotalPrice;
+      return calculatedPastryPrice;
     }
   }
 }
