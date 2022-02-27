@@ -12,5 +12,10 @@ namespace Bakery
       SinglePastryPrice = 2;
       BoxedPastryPrice = 5;
     }
+
+    public int CalculatePastryPrice()
+    {
+      return 0;
+    }
   }
 }

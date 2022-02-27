@@ -110,13 +110,25 @@ namespace Bakery.Tests
       Assert.AreEqual(singlePastryprice, result);
     }
 
-        [TestMethod]
+    [TestMethod]
     public void GetBoxedPastryPrice_ReturnBoxedPastryPrice_Integer()
     {
       int boxedPastryprice = 5;
       Pastry pastriesOrder = new Pastry(0);
       int result = pastriesOrder.BoxedPastryPrice;
       Assert.AreEqual(boxedPastryprice, result);
+    }
+
+        [TestMethod]
+    public void CalculatePastryPrice_ReturnPastryPrice_Integer7()
+    {
+      int pastriesNumber = 4;
+      int boxedPastriesPrice = 5;
+      int singlePastriesPrice = 2;
+      int pastryPrice = boxedPastriesPrice + singlePastriesPrice;
+      Pastry pastriesOrder = new Pastry(pastriesNumber);
+      int result = pastriesOrder.CalculatePastryPrice();
+      Assert.AreEqual(7, result);
     }
   }
 }
