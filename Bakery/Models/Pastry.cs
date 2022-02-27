@@ -8,6 +8,7 @@ namespace Bakery
     public Pastry(int pastriesNumber)
     {
       PastriesNumber = pastriesNumber;
+      SinglePastryPrice = 2;
     }
   }
 }
